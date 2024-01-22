@@ -11,6 +11,11 @@ public class App {
         for (int i = 1; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
+
+        String[] array1 = new String[] { "Morango", "Banana", "Maçã", "Uva", "Caqui", "um", "dois" };
+        String[] array2 = new String[] { "Manga", "Caqui", "Morango", "Amora", "um", "dois" };
+
+        notDoubles(array1, array2);
     };
 
     // O que é esse numero?
@@ -67,5 +72,19 @@ public class App {
             numbers[i] = initial;
         }
         return numbers;
+    };
+
+    // Duplicados nãoo!
+    public static void notDoubles(String[] array1, String[] array2) {
+        String[] exampleArray = new String[] { "Morango", "Banana", "Maçã", "Uva", "Caqui", "um", "dois" };
+        String[] exampleArray2 = new String[] { "Manga", "Caqui", "Morango", "Amora", "um", "dois" };
+
+        for (int i = 0; i < array1.length; i++) {
+            for (int j = 0; j < array2.length; j++)
+                if (exampleArray[i] == exampleArray2[j]) {
+                    System.out.println(exampleArray[i]);
+                }
+        }
     }
+
 }
